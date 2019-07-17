@@ -41,47 +41,47 @@ public class MazeBuilder : MonoBehaviour
 
                 if (tile.Trim().Equals("|"))
                 {
-                    Instantiate(vert, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(vert, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(),this.gameObject.transform);
                 }
                 else if (tile.Trim().Equals("_"))
                 {
-                    Instantiate(horz, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(horz, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
                 }
                 else if (tile.Trim().Equals("L"))
                 {
-                    Instantiate(bottomleft, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(bottomleft, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
                 }
                 else if (tile.Trim().Equals("J"))
                 {
-                    Instantiate(bottomright, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(bottomright, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
                 }
                 else if (tile.Trim().Equals("F"))
                 {
-                    Instantiate(topleft, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(topleft, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
                 }
                 else if (tile.Trim().Equals(">"))
                 {
-                    Instantiate(rightcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(rightcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
                 }
                 else if (tile.Trim().Equals("<"))
                 {
-                    Instantiate(leftcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(leftcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
                 }
                 else if (tile.Trim().Equals("^"))
                 {
-                    Instantiate(topcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(topcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
                 }
                 else if (tile.Trim().Equals("V"))
                 {
-                    Instantiate(bottomcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(bottomcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
                 }
                 else if (tile.Trim().Equals("O"))
                 {
-                    Instantiate(solo, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(solo, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
                 }
                 else if (tile.Trim().Equals("7"))
                 {
-                    Instantiate(topright, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
+                    Instantiate(topright, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
                 }
             }
         }
