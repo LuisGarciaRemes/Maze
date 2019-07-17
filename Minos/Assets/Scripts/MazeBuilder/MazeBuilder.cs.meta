@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+guid: f8a8e4fbf04985c44921c77b7fbd5788
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - maze: {fileID: 4900000, guid: 275e32928ca5a64489fd85c91ce6a99f, type: 3}
+  - vert: {fileID: 4939091010234455448, guid: 2b99eb7800cefe7459d34453587df984, type: 3}
+  - horz: {fileID: 8769888871846357838, guid: b09506f926866c249a53ba2feb3c4dd4, type: 3}
+  - bottomleft: {fileID: 8769888871846357838, guid: ee487309d2f80b546a75c9ae7a3bd102,
+      type: 3}
+  - topleft: {fileID: 8769888871846357838, guid: 53f7418d58b69694898db2e2f3c25505,
+      type: 3}
+  - bottomright: {fileID: 8769888871846357838, guid: fc73fd8d6b3aae741b3e700ed18c6045,
+      type: 3}
+  - topright: {fileID: 8769888871846357838, guid: 0793f261987efd248a388f226359df42,
+      type: 3}
+  - bottomcap: {fileID: 8769888871846357838, guid: 4536e39eb7fdf07419158add1e7759a9,
+      type: 3}
+  - topcap: {fileID: 8769888871846357838, guid: 452ba4ca055bf3f449beaca6e5960bbd,
+      type: 3}
+  - leftcap: {fileID: 8769888871846357838, guid: 0d584301ee11a054b9e6109983aca2ab,
+      type: 3}
+  - rightcap: {fileID: 8769888871846357838, guid: 02785a41b97110e44ba89be35785f913,
+      type: 3}
+  - solo: {fileID: 8062831465459793348, guid: 0333a6b71c233e541b9d760ee9c4c29a, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
