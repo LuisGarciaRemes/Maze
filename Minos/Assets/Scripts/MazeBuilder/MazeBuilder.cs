@@ -31,6 +31,8 @@ public class MazeBuilder : MonoBehaviour
         height = rows.Length;
         width = rows[0].Length;
 
+        gameObject.transform.position = new Vector3((width * x) / 4, -(height * y) / 2);
+
         for (int i = 0; i < rows.Length; i++)
         {
             string[] row = rows[i].Split(',');           
@@ -41,50 +43,55 @@ public class MazeBuilder : MonoBehaviour
 
                 if (tile.Trim().Equals("|"))
                 {
-                    Instantiate(vert, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(),this.gameObject.transform);
+                    Instantiate(vert, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
                 else if (tile.Trim().Equals("_"))
                 {
-                    Instantiate(horz, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
+                    Instantiate(horz, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
                 else if (tile.Trim().Equals("L"))
                 {
-                    Instantiate(bottomleft, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
+                    Instantiate(bottomleft, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
                 else if (tile.Trim().Equals("J"))
                 {
-                    Instantiate(bottomright, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
+                    Instantiate(bottomright, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
                 else if (tile.Trim().Equals("F"))
                 {
-                    Instantiate(topleft, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
+                    Instantiate(topleft, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
                 else if (tile.Trim().Equals(">"))
                 {
-                    Instantiate(rightcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
+                    Instantiate(rightcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
                 else if (tile.Trim().Equals("<"))
                 {
-                    Instantiate(leftcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
+                    Instantiate(leftcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
                 else if (tile.Trim().Equals("^"))
                 {
-                    Instantiate(topcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
+                    Instantiate(topcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
                 else if (tile.Trim().Equals("V"))
                 {
-                    Instantiate(bottomcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
+                    Instantiate(bottomcap, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
                 else if (tile.Trim().Equals("O"))
                 {
-                    Instantiate(solo, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
+                    Instantiate(solo, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
                 else if (tile.Trim().Equals("7"))
                 {
-                    Instantiate(topright, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion(), this.gameObject.transform);
+                    Instantiate(topright, new Vector3(j * x + x / 2, -i * y - y / 2, 0.0f), new Quaternion());
                 }
             }
         }
-        this.gameObject.GetComponent<SpriteRenderer>().size = new Vector2(x*width*.535f, y * height);
+        this.gameObject.GetComponent<SpriteRenderer>().size = new Vector2(x*width/2, y * height);
+    }
+
+    private void OnApplicationQuit()
+    {
+        GameObject.Destroy(gameObject);
     }
 }

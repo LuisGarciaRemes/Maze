@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float movementSpeed;
+    public float glaiveSpeed;
     private Rigidbody2D rb;
     [SerializeField] GameObject glaive;
 
@@ -35,11 +36,12 @@ public class PlayerController : MonoBehaviour
             force += new Vector2(movementSpeed, 0.0f);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && !glaive.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Space) && !glaive.activeSelf && !force.Equals(new Vector2()))
         {
             glaive.transform.position = this.gameObject.transform.position + new Vector3(force.normalized.x, force.normalized.y)/movementSpeed;
             glaive.SetActive(true);
-            glaive.gameObject.GetComponent<Rigidbody2D>().AddForce(force*50);
+            glaive.gameObject.GetComponent<Rigidbody2D>().AddForce(force*glaiveSpeed);
+            glaive.gameObject.GetComponent<Rigidbody2D>().AddTorque(glaiveSpeed/10);
         }
 
         rb.AddForce(force);
